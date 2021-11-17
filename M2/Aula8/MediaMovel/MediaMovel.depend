@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1634650743 source:d:\faculdade\pds\m2\aula8\mediamovel\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+
+1636810520 source:c:\users\nicole magagnin\documents\faculdade\pds\m2\aula8\mediamovel\main.cpp
+	<stdio.h>
+	<fcntl.h>
+	<io.h>
+	"Coef_PF.dat"
+
+1636375249 c:\users\nicole magagnin\documents\faculdade\pds\m2\aula8\mediamovel\coef_pb.dat
+
+1636461342 c:\users\nicole magagnin\documents\faculdade\pds\m2\aula8\mediamovel\coef_pa.dat
+
+1636809987 c:\users\nicole magagnin\documents\faculdade\pds\m2\aula8\mediamovel\coef_rf.dat
+
+1636811006 c:\users\nicole magagnin\documents\faculdade\pds\m2\aula8\mediamovel\coef_pf.dat
+
+1637103953 source:c:\users\vitor\desktop\pds_nicole\processamentodigitaldesinais\m2\aula8\mediamovel\main.cpp
+	<stdio.h>
+	<fcntl.h>
+	<io.h>
+	"Coefs_mm_8.dat"
+
+1637103249 c:\users\vitor\desktop\pds_nicole\processamentodigitaldesinais\m2\aula8\mediamovel\coefs_mm_8.dat
+
