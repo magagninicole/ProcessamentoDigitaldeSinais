@@ -84,6 +84,14 @@ saida = geraRF()
 
 Hsaida = saida
 
+plt.title("H")
+plt.plot(Hsaida, 'r')
+plt.grid()
+
+plt.tight_layout()
+plt.show()
+
+
 with open("Coef_RF.dat", "w") as f:
     for s in saida:
         f.write(str(s) +",\n")

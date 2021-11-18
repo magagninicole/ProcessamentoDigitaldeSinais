@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1637148007 source:c:\users\nicole magagnin\desktop\sinais\processamentodigitaldesinais\m2\equalizador\equalizador\main.cpp
+	<stdio.h>
+	<fcntl.h>
+	<io.h>
+	"equalizador.dat"
+
+1637192979 c:\users\nicole magagnin\desktop\sinais\processamentodigitaldesinais\m2\equalizador\equalizador\equalizador.dat
+

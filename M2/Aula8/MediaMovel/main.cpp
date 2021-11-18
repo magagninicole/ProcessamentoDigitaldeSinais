@@ -12,7 +12,7 @@ int main() {
     float y = 0;
 
     float coef[tamanho_coef] = {
-        #include "Coef_PB.dat" // Coeficiente
+        #include "Coef_PF.dat" // Coeficiente
     };
 
 

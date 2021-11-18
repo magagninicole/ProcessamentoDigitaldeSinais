@@ -89,6 +89,14 @@ saida = geraPF()
 
 Hsaida = saida
 
+plt.title("H")
+plt.plot(Hsaida, 'r')
+plt.grid()
+
+plt.tight_layout()
+plt.show()
+
+
 with open("Coef_PF.dat", "w") as f:
     for i in range(len(Hsaida)):
         f.write(str(Hsaida[i]) +",\n")
