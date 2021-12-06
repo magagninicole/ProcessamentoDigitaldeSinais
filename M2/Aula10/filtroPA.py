@@ -18,9 +18,9 @@ w = numpy.arange(0, numpy.pi, passo)
 
 for i in range(len(H)):
     if(i - M/2) == 0:
-        H[i] = 1- (2 * numpy.pi * fc)
+        H[i] = (2 * numpy.pi * fc)
     if(i - M/2) != 0:
-        H[i] = 0-(numpy.sin(2 * numpy.pi * fc * (i - M/2)) / (i - M/2))
+        H[i] = (numpy.sin(2 * numpy.pi * fc * (i - M/2)) / (i - M/2))
     H[i] = H[i] * (0.54 - 0.46 * numpy.cos(2 * numpy.pi * i / M))
 
 SUM = 0
@@ -41,7 +41,7 @@ for j in range(100,4999):
 
 for k in range(M):
     H[k] = H[k] * -1
-    if( k == M/2):
+    if( k == (M/2)):
         H[k] +=1
 
 
