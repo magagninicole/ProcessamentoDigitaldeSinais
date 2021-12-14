@@ -7,23 +7,22 @@ fid.close()
 
 n = len(x)
 
-with open('Coef_PB.dat', 'r') as fid:
+with open('Coef_MM_8.dat', 'r') as fid:
     coeficientes= numpy.fromfile(fid, numpy.float64)
 fid.close()
 
 d = numpy.zeros(n) 
 y = numpy.zeros(n) 
-
 k = 8
 w = numpy.zeros(k)
 e = numpy.zeros(n)
-
-
 i = 0
 j = 0
-
 saidaD = numpy.zeros(len(coeficientes))
-i = 0
+saidaY = numpy.zeros(len(w))
+passo = 0.0000000005
+
+
 
 for i in range(len(x)):
     sum=0
@@ -33,9 +32,7 @@ for i in range(len(x)):
     
     d[i] = sum
 
-saidaY = numpy.zeros(len(w))
 
-passo = 0.0000000005
 
 for i in range(len(x)):
     sum2 =0
