@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding='ISO-8859-1'?>
-<visualdsp-project schema="17" name="Equalizador" file="Equalizador.dpj" version="1">
+<visualdsp-project schema="17" name="Equalizador_otimizado" file="Equalizador_otimizado.dpj" version="1">
 	<!-- Project build target -->
 	<target>
 		<processor revision="Automatic">ADSP-BF533</processor>
@@ -67,15 +67,19 @@
 		</folder>
 		<folder name="Source Files" ext=".c,.cpp,.cxx,.asm,.dsp,.s">
 			<files>
-				<file name=".\Coef_PA.dat">
+				<file name=".\Coef_PA_short.dat">
 				</file>
-				<file name=".\Coef_PB.dat">
+				<file name=".\Coef_PB_short.dat">
 				</file>
-				<file name=".\Coef_PF.dat">
+				<file name=".\Coef_PF_short.dat">
 				</file>
-				<file name=".\Coef_RF.dat">
+				<file name="..\Coefs_Equalizador\coefs_short_PA.dat">
 				</file>
-				<file name=".\Equalizador.c">
+				<file name="..\Coefs_Equalizador\coefs_short_PB.dat">
+				</file>
+				<file name="..\Coefs_Equalizador\coefs_short_PF.dat">
+				</file>
+				<file name=".\Equalizador_otimizado.c">
 					<file-configurations>
 						<file-configuration name="Debug">
 							<excluded-flag value="no"/>
@@ -117,7 +121,7 @@
 				<property name="Full IO"><![CDATA[False]]></property>
 				<property name="Intermediate Directory"><![CDATA[.\Debug]]></property>
 				<property name="Linker Multicore"><![CDATA[False]]></property>
-				<property name="Name"><![CDATA[Equalizador]]></property>
+				<property name="Name"><![CDATA[Equalizador_otimizado]]></property>
 				<property name="Processor"><![CDATA[ADSP-BF533]]></property>
 				<property name="Silicon Revision"><![CDATA[Automatic]]></property>
 				<property name="Strict IEEE Floating Point Compliance"><![CDATA[False]]></property>

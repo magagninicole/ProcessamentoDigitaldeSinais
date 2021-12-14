@@ -38,9 +38,9 @@ ifeq ($(MAKECMDGOALS),Equalizador_Debug)
 
 Equalizador_Debug : ./Debug/Equalizador.dxe 
 
-Debug/Equalizador.doj :Equalizador.c $(VDSP)/Blackfin/include/stdio.h $(VDSP)/Blackfin/include/yvals.h Coef_PB.dat Coef_PA.dat Coef_PF.dat 
+./Debug/Equalizador.doj :Equalizador.c $(VDSP)/Blackfin/include/stdio.h $(VDSP)/Blackfin/include/yvals.h $(VDSP)/Blackfin/include/cycles.h $(VDSP)/Blackfin/include/xcycle_count.h $(VDSP)/Blackfin/include/limits.h $(VDSP)/Blackfin/include/cycle_count_bf.h Coef_PB.dat Coef_PA.dat Coef_PF.dat 
 	@echo ".\Equalizador.c"
-	$(VDSP)/ccblkfn.exe -c .\Equalizador.c -file-attr ProjectName=Equalizador -g -structs-do-not-overlap -no-multiline -double-size-32 -decls-strong -warn-protos -proc ADSP-BF533 -o .\Debug\Equalizador.doj -MM
+	$(VDSP)/ccblkfn.exe -c .\Equalizador.c -file-attr ProjectName=Equalizador -g -structs-do-not-overlap -no-multiline -D DO_CYCLE_COUNTS -double-size-32 -decls-strong -warn-protos -proc ADSP-BF533 -o .\Debug\Equalizador.doj -MM
 
 ./Debug/Equalizador.dxe :$(VDSP)/Blackfin/ldf/adsp-BF533.ldf $(VDSP)/Blackfin/lib/bf532_rev_0.5/crtsf532y.doj ./Debug/Equalizador.doj $(VDSP)/Blackfin/lib/bf532_rev_0.5/__initsbsz532.doj $(VDSP)/Blackfin/lib/cplbtab533.doj $(VDSP)/Blackfin/lib/bf532_rev_0.5/crtn532y.doj $(VDSP)/Blackfin/lib/bf532_rev_0.5/libsmall532y.dlb $(VDSP)/Blackfin/lib/bf532_rev_0.5/libio532y.dlb $(VDSP)/Blackfin/lib/bf532_rev_0.5/libc532y.dlb $(VDSP)/Blackfin/lib/bf532_rev_0.5/librt_fileio532y.dlb $(VDSP)/Blackfin/lib/bf532_rev_0.5/libevent532y.dlb $(VDSP)/Blackfin/lib/bf532_rev_0.5/libcpp532y.dlb $(VDSP)/Blackfin/lib/bf532_rev_0.5/libf64ieee532y.dlb $(VDSP)/Blackfin/lib/bf532_rev_0.5/libdsp532y.dlb $(VDSP)/Blackfin/lib/bf532_rev_0.5/libsftflt532y.dlb $(VDSP)/Blackfin/lib/bf532_rev_0.5/libetsi532y.dlb $(VDSP)/Blackfin/lib/bf532_rev_0.5/Debug/libssl532y.dlb $(VDSP)/Blackfin/lib/bf532_rev_0.5/Debug/libdrv532y.dlb $(VDSP)/Blackfin/lib/bf532_rev_0.5/Debug/libusb532y.dlb $(VDSP)/Blackfin/lib/bf532_rev_0.5/libprofile532y.dlb 
 	@echo "Linking..."
@@ -51,7 +51,7 @@ endif
 ifeq ($(MAKECMDGOALS),Equalizador_Debug_clean)
 
 Equalizador_Debug_clean:
-	-$(RM) "Debug\Equalizador.doj"
+	-$(RM) ".\Debug\Equalizador.doj"
 	-$(RM) ".\Debug\Equalizador.dxe"
 	-$(RM) ".\Debug\*.ipa"
 	-$(RM) ".\Debug\*.opa"
